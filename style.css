@@ -1,0 +1,22 @@
+div {
+    text-align: center;
+    height: auto;
+}
+
+
+.container {
+    display: grid; 
+    grid-template-columns: 50% 50%; 
+    grid-template-rows: 2fr; 
+    grid-template-areas: 
+      ". selecteur"
+      "graph1 graph2"; 
+  }
+
+.selecteur {
+    grid-area: selecteur;
+    width: auto;
+    height: auto;
+}
+.graph2 { grid-area: graph2; }
+.graph1 { grid-area: graph1; }
