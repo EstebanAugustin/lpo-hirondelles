@@ -1,17 +1,15 @@
-// Déclarer les letiables à une portée globale
 let objetSelector = document.getElementById('objetSelector');
 // Ajouter un gestionnaire d'événements pour mettre à jour le deuxième graphique lors de la sélection de l'ID
 objetSelector.addEventListener('change', updateSecondChart);
 let ctx1 = document.getElementById('myFirstChart').getContext('2d');
 let ctx2 = document.getElementById('mySecondChart').getContext('2d');
 let parAnneeData = {};
-let parIdEtAnneeData = {};  // Assurez-vous que cette ligne est ajoutée ici
+let parIdEtAnneeData = {};
 let myFirstChart;
 let mySecondChart;
 let selectedId = objetSelector.value;
 console.log(selectedId)
 
-// Déclarer updateSecondChart en dehors de la fonction complete
 function createChart(ctx, labels, data, datasetLabel) {
     // Créer le deuxième graphique avec les données agrégées
     return new Chart(ctx, {
